@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import "Test1ViewController.h"
+#import "MainViewController.h"
 
 @interface AppDelegate ()
 
@@ -19,8 +19,9 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    Test1ViewController *test1ViewController = [[Test1ViewController alloc] init];
-    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:test1ViewController];
+    MainViewController *viewController = [[MainViewController alloc] init];
+    viewController.hidesBottomBarWhenPushed = YES;
+    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:viewController];
     self.window.rootViewController = navigationController;
     [self.window makeKeyAndVisible];
 

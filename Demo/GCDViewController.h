@@ -5,6 +5,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface Test1ViewController : UIViewController
+@interface GCDViewController : UIViewController
 
 @end
