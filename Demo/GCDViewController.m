@@ -23,8 +23,52 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self testDispatchBarrier];
+    [self testDispatchSetTarget];
+//    [self testDispatchSync];
+//    [self testDispatchBarrier];
 //    [self testDispatchGroup];
+
+}
+
+- (void)testDispatchSetTarget {
+    dispatch_queue_t queue1 = dispatch_queue_create("com.dispatch.serial1", NULL);
+    dispatch_queue_t queue2 = dispatch_queue_create("com.dispatch.serial2", NULL);
+    dispatch_queue_t queue3 = dispatch_queue_create("com.dispatch.serial3", NULL);
+    dispatch_queue_t queue4 = dispatch_queue_create("com.dispatch.serial4", NULL);
+
+    dispatch_set_target_queue(queue1, queue4);
+    dispatch_set_target_queue(queue2, queue4);
+    dispatch_set_target_queue(queue3, queue4);
+
+    dispatch_async(queue1, ^{
+        sleep(3);
+        NSLog(@"queue1");
+    });
+    dispatch_async(queue2, ^{
+        sleep(2);
+        NSLog(@"queue2");
+    });
+    dispatch_async(queue3, ^{
+        sleep(1);
+        NSLog(@"queue3");
+    });
+
+    // 将多个serial queue指定同一个target queue(serial),那么这多个serial queue将是按顺序串行执行
+
+}
+
+- (void)testDispatchSync {
+    dispatch_queue_t queue = dispatch_get_main_queue();
+    dispatch_async(queue, ^{
+        NSLog(@"async");
+
+        dispatch_sync(queue, ^{
+            NSLog(@"sync");
+        });
+        NSLog(@"sync done");
+
+    });
+    NSLog(@"done");
 
 }
 
@@ -71,8 +115,8 @@
 }
 
 - (void)testDispatchGroup {
-        dispatch_queue_t queue = dispatch_get_global_queue(0, 0);
-        dispatch_group_t group = dispatch_group_create();
+    dispatch_queue_t queue = dispatch_get_global_queue(0, 0);
+    dispatch_group_t group = dispatch_group_create();
 
     dispatch_group_async(group, queue, ^{
         [self task1];

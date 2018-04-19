@@ -13,6 +13,7 @@
 		048AEC562087465800D36093 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 048AEC552087465800D36093 /* main.m */; };
 		1AA0864341B625DBC4FB9215 /* GCDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AA0815AE2907CF3FEB8088A /* GCDViewController.m */; };
 		1AA089982AA82F9CEE64AB4F /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AA08EEDD145A83861B1E24A /* MainViewController.m */; };
+		1AA08A73E2B1E37D85916BC8 /* BasicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AA08A6227A39B4C0A9AB390 /* BasicViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,8 @@
 		1AA0815AE2907CF3FEB8088A /* GCDViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDViewController.m; sourceTree = "<group>"; };
 		1AA083D42E75EDFF1F1E258A /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		1AA0882189A3925D27424F99 /* GCDViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDViewController.h; sourceTree = "<group>"; };
+		1AA08A6227A39B4C0A9AB390 /* BasicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BasicViewController.m; sourceTree = "<group>"; };
+		1AA08B19E27B0A31620001CC /* BasicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BasicViewController.h; sourceTree = "<group>"; };
 		1AA08EEDD145A83861B1E24A /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -69,6 +72,8 @@
 				1AA0882189A3925D27424F99 /* GCDViewController.h */,
 				1AA08EEDD145A83861B1E24A /* MainViewController.m */,
 				1AA083D42E75EDFF1F1E258A /* MainViewController.h */,
+				1AA08A6227A39B4C0A9AB390 /* BasicViewController.m */,
+				1AA08B19E27B0A31620001CC /* BasicViewController.h */,
 			);
 			path = Demo;
 			sourceTree = "<group>";
@@ -146,6 +151,7 @@
 				048AEC482087465700D36093 /* AppDelegate.m in Sources */,
 				1AA0864341B625DBC4FB9215 /* GCDViewController.m in Sources */,
 				1AA089982AA82F9CEE64AB4F /* MainViewController.m in Sources */,
+				1AA08A73E2B1E37D85916BC8 /* BasicViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

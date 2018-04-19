@@ -5,6 +5,7 @@
 
 #import "MainViewController.h"
 #import "GCDViewController.h"
+#import "BasicViewController.h"
 
 @interface MainViewController () <UITableViewDataSource, UITableViewDelegate>
 
@@ -30,6 +31,9 @@
 
     self.dataArray = @[
             @{
+                    @"name" : @"Basic",
+            },
+            @{
                     @"name" : @"GCD"
             },
 
@@ -45,6 +49,7 @@
                                                reuseIdentifier:@"tableViewCell"];
 
     }
+    tableViewCell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     NSDictionary *dictionary = self.dataArray[indexPath.row];
     NSString *name = dictionary[@"name"];
     tableViewCell.textLabel.text = name;
@@ -55,7 +60,13 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     NSDictionary *dictionary = self.dataArray[indexPath.row];
     NSString *name = dictionary[@"name"];
-    if ([name isEqualToString:@"GCD"]) {
+    if ([name isEqualToString:@"Basic"]) {
+        BasicViewController *viewController = [[BasicViewController alloc] init];
+        viewController.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:viewController
+                                             animated:YES];
+
+    } else if ([name isEqualToString:@"GCD"]) {
         GCDViewController *viewController = [[GCDViewController alloc] init];
         viewController.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:viewController
