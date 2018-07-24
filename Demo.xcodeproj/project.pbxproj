@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		045738302105F6FD00F1279D /* SingletonViewContrller.m in Sources */ = {isa = PBXBuildFile; fileRef = 0457382F2105F6FD00F1279D /* SingletonViewContrller.m */; };
+		045738332105F71800F1279D /* SingletonObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 045738322105F71800F1279D /* SingletonObject.m */; };
+		045738362105FB6B00F1279D /* AtuoReleaseSingletonObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 045738352105FB6B00F1279D /* AtuoReleaseSingletonObject.m */; };
 		048AEC482087465700D36093 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 048AEC472087465700D36093 /* AppDelegate.m */; };
 		048AEC502087465800D36093 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 048AEC4F2087465800D36093 /* Assets.xcassets */; };
 		048AEC532087465800D36093 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 048AEC512087465800D36093 /* LaunchScreen.storyboard */; };
@@ -17,6 +20,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0457382E2105F6FD00F1279D /* SingletonViewContrller.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SingletonViewContrller.h; sourceTree = "<group>"; };
+		0457382F2105F6FD00F1279D /* SingletonViewContrller.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SingletonViewContrller.m; sourceTree = "<group>"; };
+		045738312105F71800F1279D /* SingletonObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SingletonObject.h; sourceTree = "<group>"; };
+		045738322105F71800F1279D /* SingletonObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SingletonObject.m; sourceTree = "<group>"; };
+		045738342105FB6B00F1279D /* AtuoReleaseSingletonObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AtuoReleaseSingletonObject.h; sourceTree = "<group>"; };
+		045738352105FB6B00F1279D /* AtuoReleaseSingletonObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AtuoReleaseSingletonObject.m; sourceTree = "<group>"; };
 		048AEC432087465700D36093 /* Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		048AEC462087465700D36093 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		048AEC472087465700D36093 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -65,15 +74,21 @@
 				048AEC462087465700D36093 /* AppDelegate.h */,
 				048AEC472087465700D36093 /* AppDelegate.m */,
 				048AEC4F2087465800D36093 /* Assets.xcassets */,
-				048AEC512087465800D36093 /* LaunchScreen.storyboard */,
-				048AEC542087465800D36093 /* Info.plist */,
-				048AEC552087465800D36093 /* main.m */,
-				1AA0815AE2907CF3FEB8088A /* GCDViewController.m */,
-				1AA0882189A3925D27424F99 /* GCDViewController.h */,
-				1AA08EEDD145A83861B1E24A /* MainViewController.m */,
-				1AA083D42E75EDFF1F1E258A /* MainViewController.h */,
-				1AA08A6227A39B4C0A9AB390 /* BasicViewController.m */,
 				1AA08B19E27B0A31620001CC /* BasicViewController.h */,
+				1AA08A6227A39B4C0A9AB390 /* BasicViewController.m */,
+				1AA0882189A3925D27424F99 /* GCDViewController.h */,
+				1AA0815AE2907CF3FEB8088A /* GCDViewController.m */,
+				048AEC542087465800D36093 /* Info.plist */,
+				048AEC512087465800D36093 /* LaunchScreen.storyboard */,
+				048AEC552087465800D36093 /* main.m */,
+				1AA083D42E75EDFF1F1E258A /* MainViewController.h */,
+				1AA08EEDD145A83861B1E24A /* MainViewController.m */,
+				045738312105F71800F1279D /* SingletonObject.h */,
+				045738322105F71800F1279D /* SingletonObject.m */,
+				045738342105FB6B00F1279D /* AtuoReleaseSingletonObject.h */,
+				045738352105FB6B00F1279D /* AtuoReleaseSingletonObject.m */,
+				0457382E2105F6FD00F1279D /* SingletonViewContrller.h */,
+				0457382F2105F6FD00F1279D /* SingletonViewContrller.m */,
 			);
 			path = Demo;
 			sourceTree = "<group>";
@@ -147,8 +162,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				045738302105F6FD00F1279D /* SingletonViewContrller.m in Sources */,
 				048AEC562087465800D36093 /* main.m in Sources */,
 				048AEC482087465700D36093 /* AppDelegate.m in Sources */,
+				045738362105FB6B00F1279D /* AtuoReleaseSingletonObject.m in Sources */,
+				045738332105F71800F1279D /* SingletonObject.m in Sources */,
 				1AA0864341B625DBC4FB9215 /* GCDViewController.m in Sources */,
 				1AA089982AA82F9CEE64AB4F /* MainViewController.m in Sources */,
 				1AA08A73E2B1E37D85916BC8 /* BasicViewController.m in Sources */,

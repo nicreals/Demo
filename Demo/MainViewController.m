@@ -6,6 +6,7 @@
 #import "MainViewController.h"
 #import "GCDViewController.h"
 #import "BasicViewController.h"
+#import "SingletonViewContrller.h"
 
 @interface MainViewController () <UITableViewDataSource, UITableViewDelegate>
 
@@ -20,7 +21,7 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         self.title = @"Test";
-
+        
     }
     return self;
 }
@@ -28,18 +29,21 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.view addSubview:self.tableView];
-
+    
     self.dataArray = @[
-            @{
-                    @"name" : @"Basic",
-            },
-            @{
-                    @"name" : @"GCD"
-            },
-
-    ];
+                       @{
+                           @"name" : @"Basic",
+                           },
+                       @{
+                           @"name" : @"GCD"
+                           },
+                       @{
+                           @"name" : @"Singleton"
+                           }
+                       
+                       ];
     [self.tableView reloadData];
-
+    
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -47,13 +51,13 @@
     if (!tableViewCell) {
         tableViewCell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault
                                                reuseIdentifier:@"tableViewCell"];
-
+        
     }
     tableViewCell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     NSDictionary *dictionary = self.dataArray[indexPath.row];
     NSString *name = dictionary[@"name"];
     tableViewCell.textLabel.text = name;
-
+    
     return tableViewCell;
 }
 
@@ -65,15 +69,19 @@
         viewController.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:viewController
                                              animated:YES];
-
+        
     } else if ([name isEqualToString:@"GCD"]) {
         GCDViewController *viewController = [[GCDViewController alloc] init];
         viewController.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:viewController
                                              animated:YES];
-
+        
+    } else if ([name isEqualToString:@"Singleton"]) {
+        SingletonViewContrller *viewController = [[SingletonViewContrller alloc] init];
+        viewController.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:viewController animated:YES];
     }
-
+    
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
@@ -93,7 +101,7 @@
         _tableView.dataSource = self;
         _tableView.rowHeight = UITableViewAutomaticDimension;
         _tableView.estimatedRowHeight = 44;
-
+        
     }
     return _tableView;
 }
