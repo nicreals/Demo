@@ -7,6 +7,7 @@
 #import "GCDViewController.h"
 #import "BasicViewController.h"
 #import "SingletonViewContrller.h"
+#import "CoreGraphicViewController.h"
 
 @interface MainViewController () <UITableViewDataSource, UITableViewDelegate>
 
@@ -39,7 +40,10 @@
                            },
                        @{
                            @"name" : @"Singleton"
-                           }
+                           },
+                       @{
+                           @"name" : @"CoreGraphic"
+                           },
                        
                        ];
     [self.tableView reloadData];
@@ -78,6 +82,10 @@
         
     } else if ([name isEqualToString:@"Singleton"]) {
         SingletonViewContrller *viewController = [[SingletonViewContrller alloc] init];
+        viewController.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:viewController animated:YES];
+    } else if ([name isEqualToString:@"CoreGraphic"]) {
+        CoreGraphicViewController *viewController = [[CoreGraphicViewController alloc] init];
         viewController.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:viewController animated:YES];
     }

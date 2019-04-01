@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0430AC5F224E12D600788093 /* CoreGraphicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0430AC5E224E12D600788093 /* CoreGraphicViewController.m */; };
 		045738302105F6FD00F1279D /* SingletonViewContrller.m in Sources */ = {isa = PBXBuildFile; fileRef = 0457382F2105F6FD00F1279D /* SingletonViewContrller.m */; };
 		045738332105F71800F1279D /* SingletonObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 045738322105F71800F1279D /* SingletonObject.m */; };
 		045738362105FB6B00F1279D /* AtuoReleaseSingletonObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 045738352105FB6B00F1279D /* AtuoReleaseSingletonObject.m */; };
@@ -20,6 +21,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0430AC5D224E12D600788093 /* CoreGraphicViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoreGraphicViewController.h; sourceTree = "<group>"; };
+		0430AC5E224E12D600788093 /* CoreGraphicViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoreGraphicViewController.m; sourceTree = "<group>"; };
 		0457382E2105F6FD00F1279D /* SingletonViewContrller.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SingletonViewContrller.h; sourceTree = "<group>"; };
 		0457382F2105F6FD00F1279D /* SingletonViewContrller.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SingletonViewContrller.m; sourceTree = "<group>"; };
 		045738312105F71800F1279D /* SingletonObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SingletonObject.h; sourceTree = "<group>"; };
@@ -89,6 +92,8 @@
 				045738352105FB6B00F1279D /* AtuoReleaseSingletonObject.m */,
 				0457382E2105F6FD00F1279D /* SingletonViewContrller.h */,
 				0457382F2105F6FD00F1279D /* SingletonViewContrller.m */,
+				0430AC5D224E12D600788093 /* CoreGraphicViewController.h */,
+				0430AC5E224E12D600788093 /* CoreGraphicViewController.m */,
 			);
 			path = Demo;
 			sourceTree = "<group>";
@@ -170,6 +175,7 @@
 				1AA0864341B625DBC4FB9215 /* GCDViewController.m in Sources */,
 				1AA089982AA82F9CEE64AB4F /* MainViewController.m in Sources */,
 				1AA08A73E2B1E37D85916BC8 /* BasicViewController.m in Sources */,
+				0430AC5F224E12D600788093 /* CoreGraphicViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
